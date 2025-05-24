@@ -39,16 +39,18 @@ After imputation, all features are normalized to ensure they are on a consistent
   - Z-score scaling: Transforms features to have zero mean and unit variance, useful for models that assume Gaussian-like distributions.
   - Min-max scaling: Rescales features to a fixed range, typically [0, 1], preserving relative relationships and improving performance for distance-based models.
 
-for SVM run the following script: 
-` python preprocess.py \
-  --input_dir data/SVM_data.xlsx \ 
-  --output_dir output \            
+
+To preprocess the data for SVM, run the following command:
+```bash
+python preprocess.py \
+  --input_dir data/SVM_data.xlsx \
+  --output_dir output \
   --features_to_normalize Sex CTPs Nodule_No Multinodular_tumor BCLC Age BMI MTD ALT AST ALP ALB Bili WCC Hb Neu Lym PLT CRP AFP ALBIs ALBIg \
   --scaling_method MinMaxScaler \
   --imputation_method MICE \
   --replace_val -1 \
   --add_indicator False \
-  --do_norm True `
+  --do_norm True
 
 
 
