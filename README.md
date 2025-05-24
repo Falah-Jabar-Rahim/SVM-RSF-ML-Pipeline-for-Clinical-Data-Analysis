@@ -26,8 +26,17 @@
 
 # 1. Dataset:
 
-
 <p align="justify"> Prepare your dataset in Excel files and place them in the `/data` folder — one file for the SVM model and one for the RSF model. For the SVM file, the first column should contain patient IDs, followed by clinical variables as columns, and the last column must contain the classification label (e.g., 0: negative, 1: positive). For the RSF file, the structure is similar: the first column is the patient ID, followed by clinical variables, with the last two columns as "time" and "event" (e.g., [Survival_month, Survival_status]). Example files for both formats are provided in the `/data` folder.</p>
+
+# 2. Preprocessing:
+
+The preprocessing pipeline consists of the following steps:
+- Data Imputation - Missing values are handled using two strategies:
+  - MICE (Multiple Imputation by Chained Equations): Estimates missing values based on relationships between variables.
+  - Constant Imputation: Replaces missing values with a fixed value (e.g., 0 or a specific value)
+
+
+
 
 
 <p align="justify"> prepare your dataset in exel files and put them in folder `/data`, one for SVM and one for RSF. the SVM file the rist coulm is pairtnt ID,  in the row and clincal varalbes in the coumn, the last colum must be the classification label (eg., 0:postive, 1: negative). SImilar for RSF, first coulm paient ID foolowed by clinical varbles, and the last two columnss are "time" and "event" (eg., [Survival_month,Survival_status]). two examples are provided in folder  `/data`
