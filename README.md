@@ -64,9 +64,8 @@ To preprocess the data for RSF, run the same command as before but change the in
 
 # 3. SVM:
 
-After preprocessing your dataset, you can train and evaluate the Support Vector Machine (SVM) classifier using the `SVM.py` script. This script accepts several configurable parameters for tuning and experimentation.
+After preprocessing your dataset, you can train and evaluate the SVM classifier using the `SVM.py` script. This script accepts several configurable parameters for tuning and experimentation.
 ```bash
-
 python SVM.py \
   --dataset output/feature_filled_norm.xlsx \
   --output_dir output \
@@ -84,10 +83,31 @@ Notes:
 
 
 # 4. RSF:
-
-
-
-
+After preprocessing your dataset, you can train and evaluate the RSF predictor  using the `RSF.py` script. This script accepts several configurable parameters for tuning and experimentation.
+```bash
+python RSF.py \
+  --dataset output/feature_filled_norm.xlsx \
+  --output_dir output \
+  --lts 15 \
+  --t_calb 36 \
+  --t_youden 24 \
+  --n_estimators 300 \
+  --min_samples_split 10 \
+  --min_samples_leaf 10 \
+  --max_features sqrt \
+  --n_splits 5
+```
+Notes:
+- Set `--dataset` to the path of the preprocessed Excel file containing survival data (e.g., output/test.xlsx).
+- Set `--output_dir` to specify where the results (e.g., survival curves, calibration plots) will be saved.
+- Use `--lts` to define the time (in months) up to which the number of deaths will be counted. This is useful for early event-based summaries or statistics.
+- Use `--t_calb` to set the time point (in months) at which calibration plots will be computed and displayed.
+- Use `--t_youden` to define the time (in months) at which the Youden Index is calculated to find an optimal risk threshold.
+- Set `--n_estimators` to define the number of trees in the Random Survival Forest. More trees can improve stability but increase computation time (default: 300).
+- Use `--min_samples_split` to control the minimum number of samples required to split an internal node. Higher values can reduce overfitting (default: 10).
+- Use `--min_samples_leaf` to set the minimum number of samples required at a leaf node. This prevents creating very small terminal nodes (default: 10).
+- Set `--max_features` to specify the number of features to consider when looking for the best split. Accepts options like "sqrt", "log2", or a float (e.g., 0.5 for 50% of features).
+- Use `--n_splits` to define how many folds to use for cross-validation when evaluating the model (default: 5).
 
 
 you need to privide the name of the features that need normalization in the case of min-max. some features may be alreday in the range of 0-1, so no need to normalize. 
