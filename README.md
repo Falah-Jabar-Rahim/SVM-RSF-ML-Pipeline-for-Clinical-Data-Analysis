@@ -7,8 +7,8 @@
 # Setting Up the Pipeline:
 
 1. System requirements:
-- Ubuntu, Windos, Mac
-- Python version: 3.9 (using conda environments)
+- Ubuntu, Windows, Mac
+- Python version >= 3.9 (using conda environments)
 - Anaconda version >= 23.7.4
 2. Steps to Set Up the Pipeline:
 - Download the pipeline to your Desktop
@@ -23,18 +23,8 @@
 - Install required packages:
   `pip install -r requirements.txt`
 
-# Datasets:
 
-- Contact the corresponding author to access the datasets described in the paper
-- The datasets (only tiles and segmentation masks) are available for research purposes only
-
-# Pretrained Weights:
-
-- Download the pretrained weights from this link: [Weights](https://drive.google.com/drive/folders/1_p6jBo9DkOvN_YAvBikP73VcYjp76cXr?usp=share_link)
-- Place the artifact detection weights in the `pretrained_ckpt` folder, and the pen-marking detection and removal weights in the `/Ink_Removal/pre-trained` folder
-
-
-# Inference:
+# 1: Preprocessing:
 
 <p align="justify"> The pipeline starts by identifying the WSI tissue region and dividing it into smaller image tiles (e.g., 270x270). Pen-marking detection is then applied to categorize the tiles into two classes: those with high pen-marking (which are discarded) and those with medium and low pen-marking. Tiles with medium and low pen-marking undergo a pen-marking removal process, resulting in clean image tiles. Next, the clean image tiles are fed into the proposed artifact detection model to identify artifacts, followed by an optimization technique to select the best tiles—those with minimal artifacts and background and maximum qualified tissue. Finally, the WSI is reconstructed by combining the selected tiles to generate the final output. Additionally, the model generates a segmentation for the entire WSI and also provides statistics on the tile segmentations. </p>
 
