@@ -40,7 +40,7 @@ After imputation, all features are normalized to ensure they are on a consistent
   - Min-max scaling: Rescales features to a fixed range, typically [0, 1], preserving relative relationships and improving performance for distance-based models.
 
 for SVM run the following script: 
-`python preprocess.py \
+` python preprocess.py \
   --input_dir data/SVM_data.xlsx \ 
   --output_dir output \            
   --features_to_normalize Sex CTPs Nodule_No Multinodular_tumor BCLC Age BMI MTD ALT AST ALP ALB Bili WCC Hb Neu Lym PLT CRP AFP ALBIs ALBIg \
@@ -48,7 +48,7 @@ for SVM run the following script:
   --imputation_method MICE \
   --replace_val -1 \
   --add_indicator False \
-  --do_norm True`
+  --do_norm True `
 
 
 
