@@ -42,7 +42,7 @@ After imputation, all features are normalized to ensure they are on a consistent
 
 To preprocess the data for SVM, run the following command:
 ```bash
-python preprocess.py \
+python pre-processing.py \
   --input_dir data/SVM_data.xlsx \
   --output_dir output \
   --features_to_normalize Sex CTPs Nodule_No Multinodular_tumor BCLC Age BMI MTD ALT AST ALP ALB Bili WCC Hb Neu Lym PLT CRP AFP ALBIs ALBIg \
