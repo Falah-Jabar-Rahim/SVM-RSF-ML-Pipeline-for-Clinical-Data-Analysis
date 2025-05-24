@@ -99,15 +99,15 @@ python RSF.py \
 ```
 Notes:
 - Set `--dataset` to the path of the preprocessed Excel file containing survival data (e.g., output/feature_filled_norm.xlsx).
-- Set `--output_dir` to specify where the results (e.g., survival curves, calibration plots) will be saved.
-- Use `--lts` to define the time (in months) up to which the number of deaths will be counted. This is useful for early event-based summaries or statistics.
-- Use `--t_calb` to set the time point (in months) at which calibration plots will be computed and displayed.
+- Set `--output_dir` to specify where the results will be saved.
+- Use `--lts` to define the time (in months) up to which the number of deaths will be counted.
+- Use `--t_calb` to set the time point (in months) at which calibration plots will be computed.
 - Use `--t_youden` to define the time (in months) at which the Youden Index is calculated to find an optimal risk threshold.
-- Set `--n_estimators` to define the number of trees in the Random Survival Forest. More trees can improve stability but increase computation time (default: 300).
-- Use `--min_samples_split` to control the minimum number of samples required to split an internal node. Higher values can reduce overfitting (default: 10).
-- Use `--min_samples_leaf` to set the minimum number of samples required at a leaf node. This prevents creating very small terminal nodes (default: 10).
+- Set `--n_estimators` to define the number of trees in the Random Survival Forest (default is 300).
+- Use `--min_samples_split` to control the minimum number of samples required to split an internal node (default is 10).
+- Use `--min_samples_leaf` to set the minimum number of samples required at a leaf node (default is 10).
 - Set `--max_features` to specify the number of features to consider when looking for the best split. Accepts options like "sqrt", "log2", or a float (e.g., 0.5 for 50% of features).
-- Use `--n_splits` to define how many folds to use for cross-validation when evaluating the model (default: 5).
+- Use `--n_splits` to define how many folds to use for cross-validation when evaluating the model (default is 5).
 
 
 you need to privide the name of the features that need normalization in the case of min-max. some features may be alreday in the range of 0-1, so no need to normalize. 
