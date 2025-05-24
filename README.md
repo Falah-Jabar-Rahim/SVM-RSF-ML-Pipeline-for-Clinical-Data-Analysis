@@ -78,7 +78,7 @@ Notes:
 - Set `--dataset` to the path of the preprocessed Excel file you want to use for training and evaluation (e.g., output/feature_filled_norm.xlsx).
 - Set `--output_dir` to define where the model’s results will be saved (defalut is `output`)
 - Choose the SVM kernel by setting `--kernel_fn` to one of the following options: linear, rbf, poly, or sigmoid (default is rbf).
-- Control the regularization strength using `--C (default is 1.0).
+- Control the regularization strength using `--C` (default is 1.0).
 - Set `--gamma` to define the kernel coefficient. Acceptable values include 'scale', 'auto', or a float ( default is 0.55).
 
 
