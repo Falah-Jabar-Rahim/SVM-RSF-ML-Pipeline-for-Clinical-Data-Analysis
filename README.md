@@ -52,7 +52,19 @@ python preprocess.py \
   --add_indicator False \
   --do_norm True
 ```
+Note: When using MinMaxScaler, you need to manually specify only the features that require normalization, as some features may already be in the [0, 1] range and re-scaling them could distort their values. In contrast, when using Z-score normalization (StandardScaler), all features should be normalized regardless of their original range, so you should provide the full list of feature names.
 
+
+
+
+
+
+
+
+
+
+
+you need to privide the name of the features that need normalization in the case of min-max. some features may be alreday in the range of 0-1, so no need to normalize. 
 
 After imputation, all features are normalized to ensure a consistent scale across variables. This helps prevent features with larger ranges from dominating the learning process and improves model convergence and performance.
 
