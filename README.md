@@ -62,6 +62,28 @@ Notes:
 
 To preprocess the data for RSF, run the same command as before but change the input file to `--input_dir data/RSF_data.xlsx` and set `--do_norm` to False. Normalization is not required for RSF.
 
+# 3. SVM:
+
+fter preprocessing your dataset, you can train and evaluate the Support Vector Machine (SVM) classifier using the `SVM.py` script. This script accepts several configurable parameters for tuning and experimentation.
+```bash
+
+python SVM.py \
+  --dataset output/feature_filled_norm.xlsx \
+  --output_dir output \
+  --kernel_fn rbf \
+  --C 1.0 \
+  --gamma 0.55
+```
+Notes:
+- Set `--dataset` to the path of the preprocessed Excel file you want to use for training and evaluation (e.g., output/feature_filled_norm.xlsx).
+- Set `--output_dir` to define where the model’s results will be saved (defalut is `output`)
+- Choose the SVM kernel by setting `--kernel_fn` to one of the following options: linear, rbf, poly, or sigmoid (default is rbf).
+- Control the regularization strength using `--C (default is 1.0).
+- Set `--gamma` to define the kernel coefficient. Acceptable values include 'scale', 'auto', or a float ( default is 0.55).
+
+
+
+# 4. RSF:
 
 
 
