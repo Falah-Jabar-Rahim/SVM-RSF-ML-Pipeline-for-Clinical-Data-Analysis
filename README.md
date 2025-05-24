@@ -60,7 +60,7 @@ Notes:
 - Add a missing-value indicator column by setting `--add_indicator` to True.
 - Enable feature normalization by setting `--do_norm` to True; set to False to skip normalization.
 
-
+To preprocess the data for RSF, run the same command as before but change the input file to `--input_dir data/RSF_data.xlsx` and set `--do_norm` to False. Normalization is not required for RSF.
 
 
 
