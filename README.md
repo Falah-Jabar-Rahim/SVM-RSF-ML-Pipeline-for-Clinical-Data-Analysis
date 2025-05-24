@@ -64,7 +64,7 @@ To preprocess the data for RSF, run the same command as before but change the in
 
 # 3. SVM:
 
-fter preprocessing your dataset, you can train and evaluate the Support Vector Machine (SVM) classifier using the `SVM.py` script. This script accepts several configurable parameters for tuning and experimentation.
+After preprocessing your dataset, you can train and evaluate the Support Vector Machine (SVM) classifier using the `SVM.py` script. This script accepts several configurable parameters for tuning and experimentation.
 ```bash
 
 python SVM.py \
