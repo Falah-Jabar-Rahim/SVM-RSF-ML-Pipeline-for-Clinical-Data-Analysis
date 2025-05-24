@@ -98,7 +98,7 @@ python RSF.py \
   --n_splits 5
 ```
 Notes:
-- Set `--dataset` to the path of the preprocessed Excel file containing survival data (e.g., output/test.xlsx).
+- Set `--dataset` to the path of the preprocessed Excel file containing survival data (e.g., output/feature_filled_norm.xlsx).
 - Set `--output_dir` to specify where the results (e.g., survival curves, calibration plots) will be saved.
 - Use `--lts` to define the time (in months) up to which the number of deaths will be counted. This is useful for early event-based summaries or statistics.
 - Use `--t_calb` to set the time point (in months) at which calibration plots will be computed and displayed.
