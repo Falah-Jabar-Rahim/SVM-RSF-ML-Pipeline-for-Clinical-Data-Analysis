@@ -36,8 +36,8 @@ The preprocessing consists of the following steps:
   - Constant Imputation: Replaces missing values with a fixed value (e.g., 0 or a specific value)
 - Data Normalization:
 After imputation, all features are normalized to ensure they are on a consistent scale. This prevents variables with larger ranges from dominating the learning process and helps improve model training and performance. Two normalization strategies are used:
- -  Z-score normalization: Transforms features to have zero mean and unit variance, useful for models that assume Gaussian-like distributions.
- - Min-max scaling: Rescales features to a fixed range, typically [0, 1], preserving relative relationships and improving performance for distance-based models.
+  - Z-score normalization: Transforms features to have zero mean and unit variance, useful for models that assume Gaussian-like distributions.
+  - Min-max scaling: Rescales features to a fixed range, typically [0, 1], preserving relative relationships and improving performance for distance-based models.
 
 
 
