@@ -2,7 +2,7 @@
 
 ![WSI-QA](SVM-RSF.png)
 
-<p align="justify"> This pipeline provides a general framework for analyzing clinical data using both classification and survival analysis models. It begins with constructing a feature matrix, where each row corresponds to a patient and each column represents a clinical variable. Missing values are addressed through imputation, and features are normalized to ensure comparability. The processed data is then used to train two types of models: a classification model-Support Vector Machine, and a survival model-Random Survival Forest, to estimate individual survival probabilities over time. Model performance is evaluated using 5-fold cross-validation, ensuring reliability and generalizability across subsets of the data. This flexible pipeline supports a wide range of clinical prediction tasks, from risk group classification to time-to-event forecasting. </p>
+<p align="justify"> This pipeline provides a general framework for analyzing clinical data using both classification and survival analysis models. It begins with constructing a feature matrix, where each row corresponds to a patient and each column represents a clinical variable (or feature). Missing values are addressed through imputation, and features are normalized to ensure comparability. The processed data is then used to train two types of models: a classification model-Support Vector Machine, and a survival model-Random Survival Forest, to estimate individual survival probabilities over time. Model performance is evaluated using 5-fold cross-validation, ensuring reliability and generalizability across subsets of the data. This flexible pipeline supports a wide range of clinical prediction tasks, from risk group classification to time-to-event predictions </p>
 
 # Setting Up the Pipeline:
 
@@ -12,7 +12,6 @@
 - Anaconda version >= 23.7.4
 2. Steps to Set Up the Pipeline:
 - Download the pipeline to your Desktop
-- Navigate to the downloaded pipeline folder
 - Open Terminal then navigate to pipeline folder  `cd path/to/pipeline/folder`
 - Create a conda environment:
 `conda create -n SVM-RSF python=3.9`
@@ -33,12 +32,11 @@
 The preprocessing consists of the following steps:
 - Data Imputation - Missing values are handled using two strategies:
   - MICE (Multiple Imputation by Chained Equations): Estimates missing values based on relationships between variables.
-  - Constant Imputation: Replaces missing values with a fixed value (e.g., 0 or a specific value)
+  - Constant Imputation: Replaces missing values with a constant value (e.g., 0 or a specific value)
 - Data Normalization:
 After imputation, all features are normalized to ensure they are on a consistent scale. This prevents variables with larger ranges from dominating the learning process and helps improve model training and performance. Two normalization strategies are used:
   - Z-score scaling: Transforms features to have zero mean and unit variance, useful for models that assume Gaussian-like distributions.
   - Min-max scaling: Rescales features to a fixed range, typically [0, 1], preserving relative relationships and improving performance for distance-based models.
-
 
 To preprocess the data for SVM, run the following command:
 ```bash
@@ -83,7 +81,7 @@ Notes:
 
 
 # 4. RSF:
-After preprocessing your dataset, you can train and evaluate the RSF predictor  using the `RSF.py` script. This script accepts several configurable parameters for tuning and experimentation.
+After preprocessing your dataset, you can train and evaluate the RSF predictor using the `RSF.py` script. This script accepts several configurable parameters for tuning and experimentation.
 ```bash
 python RSF.py \
   --dataset output/feature_filled_norm.xlsx \
@@ -108,7 +106,7 @@ Notes:
 - Use `--min_samples_leaf` to set the minimum number of samples required at a leaf node (default is 10).
 - Set `--max_features` to specify the number of features to consider when looking for the best split. Accepts options like "sqrt", "log2", or a float (e.g., 0.5 for 50% of features).
 - Use `--n_splits` to define how many folds to use for cross-validation when evaluating the model (default is 5).
-- The outputs include: Survival probability curve, Calibration curve, plot of feature importance, and performace metrics (C-index and IBS).
+- The outputs include: Survival probability curve, Calibration curve, plot of feature importance, and performace metrics (C-index, IBS, curve drop-rate).
 
 
 # Contact:
