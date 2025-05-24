@@ -13,12 +13,12 @@
 2. Steps to Set Up the Pipeline:
 - Download the pipeline to your Desktop
 - Navigate to the downloaded pipeline folder
-- Open Terminal then navigate to pipeline folder  `cd pipeline folder`
+- Open Terminal then navigate to pipeline folder  `cd path/to/pipeline/folder`
 - Create a conda environment:
 `conda create -n SVM-RSF python=3.9`
 
 - Activate the environment:
-  `conda activate WSISmartTiling`
+  `conda activate SVM-RSF`
 
 - Install required packages:
   `pip install -r requirements.txt`
