@@ -9,7 +9,7 @@
 1. System requirements:
 - Ubuntu, Windos, Mac
 - Python version: 3.9 (using conda environments)
-- Anaconda version 23.7.4
+- Anaconda version >= 23.7.4
 2. Steps to Set Up the Pipeline:
 - Download the pipeline to your Desktop
 - Navigate to the downloaded pipeline folder
