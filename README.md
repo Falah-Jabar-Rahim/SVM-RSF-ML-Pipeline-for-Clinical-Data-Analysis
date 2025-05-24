@@ -80,10 +80,7 @@ Notes:
 - Control the regularization strength using `--C` (default is 1.0).
 - Set `--gamma` to define the kernel coefficient. Acceptable values include 'scale', 'auto', or a float ( default is 0.55).
 The outputs include:
-- [ROC Curve](https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html#sphx-glr-auto-examples-model-selection-plot-roc-py)  
-- [Precision-Recall Curve](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)  
-- [Calibration Curve](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html)  
-- Classification metrics: Accuracy (ACC), Recall, Precision, and F1-score
+- [ROC Curve](https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html#sphx-glr-auto-examples-model-selection-plot-roc-py), [Precision-Recall Curve](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html), [Calibration Curve](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html), and Classification metrics: Accuracy (ACC), Recall, Precision, and F1-score
 
 
 # 4. RSF:
