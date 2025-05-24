@@ -52,9 +52,13 @@ python preprocess.py \
   --add_indicator False \
   --do_norm True
 ```
-Note: When using MinMaxScaler, you need to manually specify only the features that require normalization, as some features may already be in the [0, 1] range and re-scaling them could distort their values. In contrast, when using Z-score normalization (StandardScaler), all features should be normalized regardless of their original range, so you should provide the full list of feature names.
-
-
+Notes: 
+- When using MinMaxScaler, you need to manually specify only the features that require normalization, as some features may already be in the [0, 1] range and re-scaling them could distort their values. In contrast, when using Z-score normalization (StandardScaler), all features should be normalized regardless of their original range, so you should provide the full list of feature names.
+- Choose the scaling method by setting `--scaling_method` to either `MinMaxScaler` or `StandardScaler`.
+- Select the imputation method by setting `--imputation_method` to either `MICE` or `const`.
+- Set `--replace_val` to specify a constant value for replacing missing entries (default is -1).
+- Add a missing-value indicator column by setting `--add_indicator` to True.
+- Enable feature normalization by setting `--do_norm` to True; set to False to skip normalization.
 
 
 
