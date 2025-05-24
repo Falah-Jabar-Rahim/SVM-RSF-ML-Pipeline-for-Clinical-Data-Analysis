@@ -16,6 +16,7 @@ parser.add_argument('--scaling_method', type=str, default='MinMaxScaler',
 parser.add_argument('--imputation_method', type=str, default="MICE", help='imputation method "const" or "MICE" ')
 parser.add_argument('--replace_val', type=int, default=-1, help='replace missing values (e.g., -1 or any value)')
 parser.add_argument('--add_indicator', type=bool, default=False, help='add indicator colum or not')
+parser.add_argument('--do_norm', type=bool, default=True, help='normalise features or not')
 
 
 
@@ -47,7 +48,10 @@ if __name__ == "__main__":
         feature_filled = data_imputation(feature)
 
     ## ----- 3: feature normalization  -----
-    feature_filled_norm = Feature_Normalization(feature_filled, features_to_normalize, scaling_method)
+    if args.do_norm:
+      feature_filled_norm = Feature_Normalization(feature_filled, features_to_normalize, scaling_method)
+    else:
+      feature_filled_norm = feature_filled
 
     ## ----- 4: save processed data  -----
     feature_filled_norm.to_excel(f"{output_path}/feature_filled_norm.xlsx", index=False)
