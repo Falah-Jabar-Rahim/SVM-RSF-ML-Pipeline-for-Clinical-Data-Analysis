@@ -79,7 +79,7 @@ Notes:
 - Choose the SVM kernel by setting `--kernel_fn` to one of the following options: linear, rbf, poly, or sigmoid (default is rbf).
 - Control the regularization strength using `--C` (default is 1.0).
 - Set `--gamma` to define the kernel coefficient. Acceptable values include 'scale', 'auto', or a float ( default is 0.55).
-- The outputs include: [ROC Curve](https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html#sphx-glr-auto-examples-model-selection-plot-roc-py), [Precision-Recall Curve](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html), [Calibration Curve](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html), plot of feature importance, and classification metrics (Accuracy (ACC), Recall, Precision, and F1-score).
+- The outputs include: ROC curve, Precision-Recall curve, Calibration curve, plot of feature importance, and classification metrics (Accuracy (ACC), Recall, Precision, and F1-score).
 
 
 # 4. RSF:
@@ -108,6 +108,7 @@ Notes:
 - Use `--min_samples_leaf` to set the minimum number of samples required at a leaf node (default is 10).
 - Set `--max_features` to specify the number of features to consider when looking for the best split. Accepts options like "sqrt", "log2", or a float (e.g., 0.5 for 50% of features).
 - Use `--n_splits` to define how many folds to use for cross-validation when evaluating the model (default is 5).
+- The outputs include: Survival probability curve, Calibration curve, plot of feature importance, and performace metrics (C-index and IBS).
 
 
 # Contact:
