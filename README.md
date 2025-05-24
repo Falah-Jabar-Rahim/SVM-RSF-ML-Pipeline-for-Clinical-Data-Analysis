@@ -24,9 +24,20 @@
   `pip install -r requirements.txt`
 
 
-# 1. Preprocessing:
+# 1. Dataset:
 
-<p align="justify"> The pipeline starts by identifying the WSI tissue region and dividing it into smaller image tiles (e.g., 270x270). Pen-marking detection is then applied to categorize the tiles into two classes: those with high pen-marking (which are discarded) and those with medium and low pen-marking. Tiles with medium and low pen-marking undergo a pen-marking removal process, resulting in clean image tiles. Next, the clean image tiles are fed into the proposed artifact detection model to identify artifacts, followed by an optimization technique to select the best tiles—those with minimal artifacts and background and maximum qualified tissue. Finally, the WSI is reconstructed by combining the selected tiles to generate the final output. Additionally, the model generates a segmentation for the entire WSI and also provides statistics on the tile segmentations. </p>
+
+<p align="justify"> Prepare your dataset in Excel files and place them in the `/data` folder — one file for the SVM model and one for the RSF model. For the SVM file, the first column should contain patient IDs, followed by clinical variables as columns, and the last column must contain the classification label (e.g., 0: negative, 1: positive). For the RSF file, the structure is similar: the first column is the patient ID, followed by clinical variables, with the last two columns as "time" and "event" (e.g., [Survival_month, Survival_status]). Example files for both formats are provided in the `/data` folder.</p>
+
+
+<p align="justify"> prepare your dataset in exel files and put them in folder `/data`, one for SVM and one for RSF. the SVM file the rist coulm is pairtnt ID,  in the row and clincal varalbes in the coumn, the last colum must be the classification label (eg., 0:postive, 1: negative). SImilar for RSF, first coulm paient ID foolowed by clinical varbles, and the last two columnss are "time" and "event" (eg., [Survival_month,Survival_status]). two examples are provided in folder  `/data`
+
+OS_m	Survival_status ![image](https://github.com/user-attachments/assets/6b6b643d-e3c0-43e0-919b-7f0db5114ea0)
+
+  
+  
+  
+  The pipeline starts by identifying the WSI tissue region and dividing it into smaller image tiles (e.g., 270x270). Pen-marking detection is then applied to categorize the tiles into two classes: those with high pen-marking (which are discarded) and those with medium and low pen-marking. Tiles with medium and low pen-marking undergo a pen-marking removal process, resulting in clean image tiles. Next, the clean image tiles are fed into the proposed artifact detection model to identify artifacts, followed by an optimization technique to select the best tiles—those with minimal artifacts and background and maximum qualified tissue. Finally, the WSI is reconstructed by combining the selected tiles to generate the final output. Additionally, the model generates a segmentation for the entire WSI and also provides statistics on the tile segmentations. </p>
 
 - Place your Whole Slide Image (WSI) into the `test_wsi` folder
 - The pre-trained weights for artifact detection are available in the `pretrained_ckpt` folder, while the weights for pen-marker removal are located in the `Ink_Removal/pre-trained` folder
