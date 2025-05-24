@@ -79,8 +79,11 @@ Notes:
 - Choose the SVM kernel by setting `--kernel_fn` to one of the following options: linear, rbf, poly, or sigmoid (default is rbf).
 - Control the regularization strength using `--C` (default is 1.0).
 - Set `--gamma` to define the kernel coefficient. Acceptable values include 'scale', 'auto', or a float ( default is 0.55).
-- Outputs: the outputs are [ROC Curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic), precesion-recall curve, calbiration curve, and classification metrics (ACC,recall, precision, and F1).
-
+The outputs include:
+- [ROC Curve](https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html#sphx-glr-auto-examples-model-selection-plot-roc-py)  
+- [Precision-Recall Curve](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)  
+- [Calibration Curve](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html)  
+- Classification metrics: Accuracy (ACC), Recall, Precision, and F1-score
 
 
 # 4. RSF:
