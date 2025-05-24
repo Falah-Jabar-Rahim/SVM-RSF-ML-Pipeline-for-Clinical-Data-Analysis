@@ -1,1 +1,2 @@
-# SVM-RSF-ML-Pipeline-for-Clinical-Data-Analysis
+# SVM and RSF Pipeline for Clinical Data Analysis
+![WSI-QA](SVM-RSF.png)
