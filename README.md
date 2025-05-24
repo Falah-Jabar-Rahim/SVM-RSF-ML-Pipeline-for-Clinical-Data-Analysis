@@ -30,12 +30,12 @@
 
 # 2. Preprocessing:
 
-The preprocessing pipeline consists of the following steps:
+The preprocessing consists of the following steps:
 - Data Imputation - Missing values are handled using two strategies:
   - MICE (Multiple Imputation by Chained Equations): Estimates missing values based on relationships between variables.
   - Constant Imputation: Replaces missing values with a fixed value (e.g., 0 or a specific value)
-
-
+- Data Normalization:
+After imputation, all features are normalized to ensure a consistent scale across variables. This helps prevent features with larger ranges from dominating the learning process and improves model convergence and performance.
 
 
 
