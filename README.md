@@ -25,7 +25,7 @@
 
 # 1. Dataset:
 
-<p align="justify"> Prepare your dataset in Excel files and place them in the `/data` folder — one file for the SVM model and one for the RSF model. For the SVM file, the first column should contain patient IDs, followed by clinical variables as columns, and the last column must contain the classification label (e.g., 0: negative, 1: positive). For the RSF file, the structure is similar: the first column is the patient ID, followed by clinical variables, with the last two columns as "time" and "event" (e.g., [Survival_month, Survival_status]). Example files for both formats are provided in the `/data` folder.</p>
+<p align="justify"> Prepare your dataset in Excel files and place them in the `/data` folder — one file for the SVM model and one for the RSF model. For the SVM file, the first column should contain patient IDs, followed by clinical variables as columns, and the last column must contain the classification label (e.g., 0: negative, 1: positive). For the RSF file, the structure is similar: the first column is the patient ID, followed by clinical variables, with the last two columns as "time" and "event" (e.g., [Survival_month, Survival_status]). Example files for both formats are provided in the `/data` folder. If you have categorical data such as ‘male’ and ‘female’, convert them to binary values like 0 and 1. For ordinal data such as ‘A’, ‘B’, ‘C’, map them to continuous values like 1, 2, 3 </p>
 
 # 2. Preprocessing:
 
