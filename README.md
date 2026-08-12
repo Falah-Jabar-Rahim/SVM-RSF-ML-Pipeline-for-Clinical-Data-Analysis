@@ -4,6 +4,8 @@
 
 <p align="justify"> This pipeline provides a general framework for analyzing clinical data using both classification and survival analysis models. It begins with constructing a feature matrix, where each row corresponds to a patient and each column represents a clinical variable (or feature). Missing values are addressed through imputation, and features are normalized to ensure comparability. The processed data is then used to train two types of models: a classification model-Support Vector Machine, and a survival model-Random Survival Forest, to estimate individual survival probabilities over time. Model performance is evaluated using 5-fold cross-validation, ensuring reliability and generalizability across subsets of the data. This flexible pipeline supports a wide range of clinical prediction tasks, from risk group classification to time-to-event predictions </p>
 
+Check out the paper: [Paper](https://www.esmorwd.org/article/S2949-8201(25)00291-7/fulltext)
+
 # Setting Up the Pipeline:
 
 1. System requirements:
@@ -109,8 +111,13 @@ Notes:
 - The outputs include: Survival probability curve, Calibration curve, plot of feature importance, and performace metrics (C-index, IBS, curve drop-rate).
 
 
+# Citation:
+
+Falah J, Lee P-C, Yoo C, Chon HJ, Cheon J, Kudo M, Huang Y-H, Scheiner B, Valenzi E, Crowley F, Hsu W-F, Celsa C, Galle PR, Vivaldi C, Lin RP-T, Lombardi P, Stefanini B, Dalbeni A, Rakaee M, Pinato DJ. 206P Development of a machine-learning model on pre-treatment characteristics to predict long-term survivorship to atezolizumab plus bevacizumab in advanced hepatocellular carcinoma. ESMO Real World Data and Digital Oncology. 2025;10:100402. doi:10.1016/j.esmorw.2025.100402.
+
 # Contact:
 
 If you have any questions or comments, please feel free to contact: falah.rahim@unn.no
+
 
 
