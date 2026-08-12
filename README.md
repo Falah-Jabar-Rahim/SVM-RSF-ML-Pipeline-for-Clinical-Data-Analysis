@@ -112,9 +112,14 @@ Notes:
 
 
 # Citation:
-
-Falah J, Lee P-C, Yoo C, Chon HJ, Cheon J, Kudo M, Huang Y-H, Scheiner B, Valenzi E, Crowley F, Hsu W-F, Celsa C, Galle PR, Vivaldi C, Lin RP-T, Lombardi P, Stefanini B, Dalbeni A, Rakaee M, Pinato DJ. 206P Development of a machine-learning model on pre-treatment characteristics to predict long-term survivorship to atezolizumab plus bevacizumab in advanced hepatocellular carcinoma. ESMO Real World Data and Digital Oncology. 2025;10:100402. doi:10.1016/j.esmorw.2025.100402.
-
+author  = {Falah, J. and Lee, P.-C. and Yoo, C. and Chon, H.J. and Cheon, J. and Kudo, M. and Huang, Y.-H. and Scheiner, B. and Valenzi, E. and Crowley, F. and Hsu, W.-F. and Celsa, C. and Galle, P.R. and Vivaldi, C. and Lin, R.P.-T. and Lombardi, P. and Stefanini, B. and Dalbeni, A. and Rakaee, M. and Pinato, D.J.},
+title   = {206P Development of a machine-learning model on pre-treatment characteristics to predict long-term survivorship to atezolizumab plus bevacizumab in advanced hepatocellular carcinoma},
+  journal = {ESMO Real World Data and Digital Oncology},
+  year    = {2025},
+  volume  = {10},
+  pages   = {100402},
+  doi     = {10.1016/j.esmorw.2025.100402}
+  
 # Contact:
 
 If you have any questions or comments, please feel free to contact: falah.rahim@unn.no
