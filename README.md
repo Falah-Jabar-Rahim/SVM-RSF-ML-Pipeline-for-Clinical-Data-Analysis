@@ -112,14 +112,16 @@ Notes:
 
 
 # Citation:
-author  = {Falah, J. and Lee, P.-C. and Yoo, C. and Chon, H.J. and Cheon, J. and Kudo, M. and Huang, Y.-H. and Scheiner, B. and Valenzi, E. and Crowley, F. and Hsu, W.-F. and Celsa, C. and Galle, P.R. and Vivaldi, C. and Lin, R.P.-T. and Lombardi, P. and Stefanini, B. and Dalbeni, A. and Rakaee, M. and Pinato, D.J.},
-title   = {206P Development of a machine-learning model on pre-treatment characteristics to predict long-term survivorship to atezolizumab plus bevacizumab in advanced hepatocellular carcinoma},
+```bibtex
+@article{
+  author = {Falah Jabar et. al},
+  title = {Development of a Machine-learning Model on Pre-treatment Characteristics to Predict Long-term Survivorship to Atezolizumab Plus Bevacizumab in advanced Hepatocellular Carcinoma},
   journal = {ESMO Real World Data and Digital Oncology},
-  year    = {2025},
-  volume  = {10},
-  pages   = {100402},
-  doi     = {10.1016/j.esmorw.2025.100402}
-  
+  year = {2025},
+  doi = {10.1016/j.esmorw.2025.100402}
+}
+```
+
 # Contact:
 
 If you have any questions or comments, please feel free to contact: falah.rahim@unn.no
